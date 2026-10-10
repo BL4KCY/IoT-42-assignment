@@ -1,11 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: playground
+  name: playground-argocd-application
+  namespace: argocd
   finalizers: []
 spec:
   destination:
-    namespace: dev
+    namespace: playground
     server: https://kubernetes.default.svc
   source:
     path: dev
