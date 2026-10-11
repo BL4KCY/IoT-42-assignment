@@ -10,4 +10,4 @@ spec:
   ports:
   - port: 8888
     targetPort: http-svc-port
-    nodePort: 30000
+    nodePort: 30183
