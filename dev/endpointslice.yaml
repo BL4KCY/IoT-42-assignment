@@ -1,0 +1,25 @@
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: wil-playground-service-abc12        # Service name + random suffix
+  namespace: playground
+  labels:
+    kubernetes.io/service-name: wil-playground-service   # ← links it to the Service
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+addressType: IPv4
+ports:
+- name: http-svc-port
+  port: 8888
+  protocol: TCP
+endpoints:
+- addresses:
+  - 10.42.0.59
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: k3d-argocd-server-0
+  zone: ""
+  hints:
+    forZones:
+    - name: ""
