@@ -6,14 +6,14 @@ metadata:
   finalizers: []
 spec:
   destination:
-    namespace: playground
+    namespace: dev
     server: https://kubernetes.default.svc
   source:
     path: dev
     repoURL: https://github.com/BL4KCY/IoT-42-assignment.git
     targetRevision: HEAD
   sources: []
-  project: default
+  project: development
   syncPolicy:
     automated:
       prune: true
