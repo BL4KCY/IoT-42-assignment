@@ -13,7 +13,7 @@ spec:
     repoURL: https://github.com/BL4KCY/IoT-42-assignment.git
     targetRevision: HEAD
   sources: []
-  project: development
+  project: default
   syncPolicy:
     automated:
       prune: true
